@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BaiduMapAPI</string>
+    <string name="hello_baidumap">HELLO 百度地图</string>
 </resources>

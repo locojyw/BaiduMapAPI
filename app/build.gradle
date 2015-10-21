@@ -26,4 +26,6 @@ dependencies {
     compile files('libs/android-async-http-1.4.8.jar')
     compile files('libs/httpcore-4.2.4.jar')
     compile 'com.android.support:cardview-v7:23.1.0'
+    compile files('libs/BaiduLBS_Android.jar')
+    compile files('libs/IndoorscapeAlbumPlugin.jar')
 }
