@@ -1,9 +1,10 @@
-package com.skyfin.baidumapapi;
+package com.skyfin.baidumapapi.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 import com.baidu.mapapi.map.MapView;
+import com.skyfin.baidumapapi.R;
 
 public class HelloBaiduMapActivity extends AppCompatActivity {
 

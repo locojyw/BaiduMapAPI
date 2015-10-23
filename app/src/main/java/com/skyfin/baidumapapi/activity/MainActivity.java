@@ -1,4 +1,4 @@
-package com.skyfin.baidumapapi;
+package com.skyfin.baidumapapi.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,10 +7,13 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.baidu.mapapi.SDKInitializer;
+import com.skyfin.baidumapapi.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
-    private TextView mHelloTvw ;
+     TextView mHelloTvw ;
+     TextView mLocationTvw;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +21,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SDKInitializer.initialize(getApplicationContext());
         setContentView(R.layout.activity_main);
         mHelloTvw = (TextView) findViewById(R.id.hello_tvw);
+        mLocationTvw = (TextView) findViewById(R.id.location_tvw);
         mHelloTvw.setOnClickListener(this);
+        mLocationTvw.setOnClickListener(this);
     }
 
     @Override
@@ -28,6 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch (id){
             case R.id.hello_tvw:
                 intent.setClass(getApplicationContext(),HelloBaiduMapActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.location_tvw:
+                intent.setClass(getApplicationContext(),LocationActivity.class);
                 startActivity(intent);
                 break;
         }
