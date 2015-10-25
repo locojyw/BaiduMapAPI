@@ -12,7 +12,7 @@ import com.baidu.mapapi.map.MapView;
 import com.baidu.mapapi.map.MyLocationConfiguration;
 import com.baidu.mapapi.map.MyLocationData;
 import com.skyfin.baidumapapi.R;
-import com.skyfin.baidumapapi.app.LocationApplication;
+import com.skyfin.baidumapapi.appserver.LocationApplication;
 import com.skyfin.baidumapapi.bean.MyLocation;
 
 public class LocationActivity extends AppCompatActivity {
