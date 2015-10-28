@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.skyfin.baidumapapi.activity.MyBaiduMapActivity">
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true" />
+
+    <ImageButton
+        android:id="@+id/sub_btn"
+        android:contentDescription="@string/sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:background="@mipmap/ic_zoomadd" />
+    <ImageButton
+        android:id="@+id/add_btn"
+        android:contentDescription="@string/add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/sub_btn"
+        android:background="@mipmap/ic_zoomsub" />
+    <Button
+        android:id="@+id/heatmap_btn"
+        android:text="@string/heat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="12sp"
+        android:layout_toLeftOf="@+id/add_btn" />
+    <Button
+        android:id="@+id/marker_btn"
+        android:text="@string/marker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="12sp"
+        android:layout_toLeftOf="@+id/heatmap_btn" />
+    <Button
+        android:id="@+id/polyline_btn"
+        android:text="@string/polyline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:textSize="12sp"
+        android:layout_toLeftOf="@+id/marker_btn" />
+</RelativeLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.skyfin.baidumapapi">
+    package="com.skyfin.baidumapapi" >
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -12,14 +12,14 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
-    <!-- 这个权限用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
-    <!-- 这个权限用于访问GPS定位-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
-    <!-- 用于读取手机当前的状态-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
-    <!-- SD卡读取权限，用户写入离线定位数据-->
-    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
     <application
         android:name=".appserver.LocationApplication"
@@ -27,29 +27,31 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <service
             android:name="com.baidu.location.f"
             android:enabled="true"
             android:process=":remote" >
             <intent-filter>
-                <action android:name="com.baidu.location.service_v2.2" >
-                </action>
+                <action android:name="com.baidu.location.service_v2.2" />
             </intent-filter>
         </service>
+
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-            android:value="vZ2FTsNCT7cyStsGK8f1rMfo" />
+            android:value="RVGVd43ju87nDuoQs0KIWCgB" />
 
-        <activity android:name=".activity.MainActivity">
+        <activity android:name=".activity.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.HelloBaiduMapActivity"></activity>
-        <activity android:name=".activity.LocationActivity"></activity>
+        <activity android:name=".activity.HelloBaiduMapActivity" />
+        <activity android:name=".activity.LocationActivity" />
+        <activity android:name=".activity.MyBaiduMapActivity" >
+        </activity>
     </application>
 
 </manifest>

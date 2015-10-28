@@ -9,10 +9,11 @@ import android.widget.TextView;
 import com.baidu.mapapi.SDKInitializer;
 import com.skyfin.baidumapapi.R;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-     TextView mHelloTvw ;
-     TextView mLocationTvw;
+    TextView mHelloTvw;
+    TextView mLocationTvw;
+    TextView mMybaiduTvw;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,21 +23,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         mHelloTvw = (TextView) findViewById(R.id.hello_tvw);
         mLocationTvw = (TextView) findViewById(R.id.location_tvw);
+        mMybaiduTvw = (TextView) findViewById(R.id.mybaidumap_tvw);
         mHelloTvw.setOnClickListener(this);
         mLocationTvw.setOnClickListener(this);
+        mMybaiduTvw.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         int id = v.getId();
-        Intent intent  = new Intent();
-        switch (id){
+        Intent intent = new Intent();
+        switch (id) {
             case R.id.hello_tvw:
-                intent.setClass(getApplicationContext(),HelloBaiduMapActivity.class);
+                intent.setClass(getApplicationContext(), HelloBaiduMapActivity.class);
                 startActivity(intent);
                 break;
             case R.id.location_tvw:
-                intent.setClass(getApplicationContext(),LocationActivity.class);
+                intent.setClass(getApplicationContext(), LocationActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.mybaidumap_tvw:
+                intent.setClass(getApplicationContext(), MyBaiduMapActivity.class);
                 startActivity(intent);
                 break;
         }
