@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView mHelloTvw;
     TextView mLocationTvw;
     TextView mMybaiduTvw;
+    TextView mPoisearch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,9 +25,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mHelloTvw = (TextView) findViewById(R.id.hello_tvw);
         mLocationTvw = (TextView) findViewById(R.id.location_tvw);
         mMybaiduTvw = (TextView) findViewById(R.id.mybaidumap_tvw);
+        mPoisearch = (TextView) findViewById(R.id.poisearch_tvw);
         mHelloTvw.setOnClickListener(this);
         mLocationTvw.setOnClickListener(this);
         mMybaiduTvw.setOnClickListener(this);
+        mPoisearch.setOnClickListener(this);
     }
 
     @Override
@@ -44,6 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.mybaidumap_tvw:
                 intent.setClass(getApplicationContext(), MyBaiduMapActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.poisearch_tvw:
+                intent.setClass(getApplicationContext(), PoiSearchActivity.class);
                 startActivity(intent);
                 break;
         }

@@ -4,11 +4,16 @@
     <string name="location">开始定位</string>
     <string name="location_baidumap">定位activity</string>
     <string name="mybaidumap">配置百度地图</string>
+    <string name="poisearch">poisearch</string>
     <string name="add">放大</string>
     <string name="sub">缩小</string>
     <string name="heat">打开热力图</string>
     <string name="marker">显示Marker</string>
     <string name="polyline">折线</string>
+    <string name="bussearch">公交路线搜索</string>
+    <string name="routesearch">路线搜索</string>
+    <string name="suggestionSearch">建议搜索</string>
+    <string name="poiSearch">poi搜索</string>
     <string name="infowindowitem1">item1</string>
     <string name="infowindowitem2">item2</string>
     <string name="infowindowitem3">item3</string>
