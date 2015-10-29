@@ -7,5 +7,9 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <style name="mydlgstyle" parent="AlertDialog.AppCompat.Light"></style>
+    <style name="Mystyle" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">@color/poiresult_layout</item>
+    </style>
+    <style name="myactivityStyle" parent="Theme.AppCompat.Light"></style>
 </resources>

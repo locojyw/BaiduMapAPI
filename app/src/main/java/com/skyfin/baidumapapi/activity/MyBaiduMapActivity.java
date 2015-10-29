@@ -143,7 +143,7 @@ public class MyBaiduMapActivity extends AppCompatActivity
         colors.add(Integer.valueOf(Color.GREEN));
 
         OverlayOptions ooPolyline = new PolylineOptions().width(10)
-                .colorsValues(colors).points(points);
+                .color(colors.get(0)).points(points);
         //添加在地图中
         mPolyline = (Polyline) mBaidumap.addOverlay(ooPolyline);
     }
